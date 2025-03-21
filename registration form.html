@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Annual Day Registration</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2e86c1;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea, button {
+            font-size: 14px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #2e86c1;
+            outline: none;
+        }
+
+        button {
+            background-color: #2e86c1;
+            color: white;
+            border: none;
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #21618c;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>College Annual Day Registration</h2>
+        <form action="/submit_registration" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">--Select Department--</option>
+                <option value="cse">Computer Science</option>
+                <option value="it">Information Technology</option>
+                <option value="mech">Mechanical</option>
+                <option value="ece">Electronics and Communication</option>
+                <option value="civil">Civil</option>
+            </select>
+
+            <label for="event">Participation Event:</label>
+            <select id="event" name="event" required>
+                <option value="">--Select Event--</option>
+                <option value="cultural_dance">Cultural Dance</option>
+                <option value="singing">Singing</option>
+                <option value="speech">Speech</option>
+                <option value="quiz">Quiz Competition</option>
+            </select>
+
+            <label for="message">Additional Notes:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any additional information..."></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+        <div class="footer">
+            <p>Looking forward to seeing you at our Annual Day Celebration!</p>
+        </div>
+    </div>
